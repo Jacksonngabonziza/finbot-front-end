@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title>Fin-Bot</title>
+<link rel="icon" type="image/png" href="https://i0.wp.com/digitalumuganda.com/wp-content/uploads/2019/09/LOGO-DIGITAL-UMUGANDA.png">
+  </head>
+
+<body>
+  <p style=text-align:center><h1 >Welcome to banking-chat-bot-api</h1></p>
+    <p style=margin:10px 5px 15px 20px> Leading financial institutions use our chatbots and voice-powered assistants 
+      that customers love to use.</br>
+    We offer premium material from banking industry leaders. Learn how banking professionals are using conversational AI </br>
+    To improve customer experience using AI-enabled services, build robust,</br> 
+    multi-domain dialog systems.The future of banking AI assistants.</p>
+
+    <style>
+.rw-conversation-container .rw-header{background-color:  #222211;} 
+.rw-conversation-container .rw-close-function{background-color:  #222211;} 
+.rw-launcher{background-color: #222211;}
+.rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #222211;} 
+/* .rw-conversation-container .rw-new-message{background-color: #222211;} */
+
+    </style>
+
+    <script>
+    localStorage.clear();
+    !(function () {
+
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+            //window.localstorage.clear();
+            window.WebChat.default(
+              {
+
+                initPayload:'/greet',  
+                customData: { language: "en" },
+                socketUrl: "https://rasa-server-jacksonngabonziza.cloud.okteto.net",
+                title:"Fin Bot",
+                subtitle:"Developed by Digital umuganda",
+                showFullScreenButton: true,
+                showMessageDate: true
+              },
+              null
+            );
+            
+          }),
+          t.insertBefore(e, t.firstChild);
+          
+      })();
+      
+      </script>
+
+
+</body>
+
+
+
+</html>
